@@ -3,11 +3,50 @@
 
 <html>
     <head>
+        <meta charset="UTF-8"
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     
     <body>
+        <script>
+            var setence = "Hi, my name is Sam!";
+            var str = "JavaScript Program to illustrate split() function";
+            var str = "10, 20, 30, 40, 50";
+            var cp_setence1 = setence.substring(0,3);
+            var cp_setence2 = setence.substring(setence.indexOf("Sam"));
+        </script>
+        <div class="container">
+            <ul>
+                <li>
+                    var str = "JavaScript Program to illustrate split() function"
+                </li>
+                <li>
+                    출력 : <span id="setence1"></span>
+                </li>
+                <li>
+                    출력 : <span id="setence2"></span>
+                </li>
+                <li>
+                    출력 : <span id="setence3"></span>
+                </li>
+                <li>
+                    출력 : <span id="setence4"></span>
+                </li>
+                <li>
+                    출력 : <span id="setence5"></span>
+                </li>
+            </ul>
+        </div>
+        <script>
+            document.getElementById("setence1").innerHTML = setence.substring(0,3);
+            document.getElementById("setence2").innerHTML = setence.substring(4);
+            document.getElementById("setence3").innerHTML = cp_setence1.concat(" ", cp_setence2);
+            console.log(setence.lastIndexOf("name"));
+            document.getElementById("setence4").innerHTML = setence.substring(setence.indexOf("name"), setence.lastIndexOf("name") + "name".length);
+            document.getElementById("setence5").innerHTML = setence.substring(setence.indexOf("Sam"), setence.lastIndexOf("Sam") + "Sam".length);
 
+
+        </script>
     </body>
 
 </html>
