@@ -11,9 +11,9 @@ console.log(req.query);
 res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-router.get('/detail', function (req, res) {
+router.get('/login', function (req, res) {
 console.log(req.query);
-res.send('Request parameters : '+req.query.email+', '+req.query.status)
+res.send('Request parameters : '+req.query.name+', '+req.query.password)
 });
 
 app.use('/', router);
