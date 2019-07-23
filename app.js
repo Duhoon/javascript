@@ -4,16 +4,7 @@ const path = require('path');
 const router = express.Router();
 router.get('/', function (req, res) {
 res.sendFile(path.join(__dirname + '/index.html'));
-});
-
-router.get('/detail', function (req, res) {
-console.log(req.query); 
-res.sendFile(path.join(__dirname + '/index.html'));
-});
-
-router.get('/login', function (req, res) {
-console.log(req.query);
-res.send('Request parameters : '+req.query.name+', '+req.query.password)
+//__dirname : It will resolve to your project folder.
 });
 
 app.use('/', router);
