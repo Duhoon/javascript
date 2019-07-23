@@ -11,14 +11,16 @@
         <script>
             var setence = "Hi, my name is Sam!";
             var str = "JavaScript Program to illustrate split() function";
-            var str = "10, 20, 30, 40, 50";
+            var num = "10, 20, 30, 40, 50";
             var cp_setence1 = setence.substring(0,3);
             var cp_setence2 = setence.substring(setence.indexOf("Sam"));
+            var str_split = str.split(" ");
+            var num_split = num.split(", ");
         </script>
         <div class="container">
             <ul>
                 <li>
-                    var str = "JavaScript Program to illustrate split() function"
+                    var str = "Hi, my name is Sam!"
                 </li>
                 <li>
                     출력 : <span id="setence1"></span>
@@ -35,15 +37,81 @@
                 <li>
                     출력 : <span id="setence5"></span>
                 </li>
+            
+            </ul>
+            // 두번째 문제 출력
+
+            <ul>
+                <li>
+                    var str = "JavaScript Program to illustrate split() function"
+                </li>
+                <li>
+                    출력 : <span id="str_split1"></span>
+                </li>
+                <li>
+                    출력 : <span id="str_split2"></span>
+                </li>
+                <li>
+                    출력 : <span id="str_split3"></span>
+                </li>
+                <li>
+                    출력 : <span id="str_split4"></span>
+                </li>
+                <li>
+                    출력 : <span id="str_split5"></span>
+                </li>
+                <li>
+                    출력 : <span id="str_split6"></span>
+                </li>
+            </ul>
+
+            // 세번째 문제 출력
+            <ul>
+                <li>
+                    var num = "10, 20, 30, 40, 50"
+                </li>
+                <li>
+                    출력 : <span id="num_split1"></span>
+                </li>
+                <li>
+                    출력 : <span id="num_split2"></span>
+                </li>
+                <li>
+                    출력 : <span id="num_split3"></span>
+                </li>
+                <li>
+                    출력 : <span id="num_split4"></span>
+                </li>
+                <li>
+                    출력 : <span id="num_split5"></span>
+                </li>
             </ul>
         </div>
         <script>
+            //1번째 문제
             document.getElementById("setence1").innerHTML = setence.substring(0,3);
             document.getElementById("setence2").innerHTML = setence.substring(4);
             document.getElementById("setence3").innerHTML = cp_setence1.concat(" ", cp_setence2);
             console.log(setence.lastIndexOf("name"));
             document.getElementById("setence4").innerHTML = setence.substring(setence.indexOf("name"), setence.lastIndexOf("name") + "name".length);
             document.getElementById("setence5").innerHTML = setence.substring(setence.indexOf("Sam"), setence.lastIndexOf("Sam") + "Sam".length);
+
+            //2번째 문제
+            document.getElementById("str_split1").innerHTML = str_split[0];
+            document.getElementById("str_split2").innerHTML = str_split[1];
+            document.getElementById("str_split3").innerHTML = str_split[2];
+            document.getElementById("str_split4").innerHTML = str_split[3];
+            document.getElementById("str_split5").innerHTML = str_split[4];
+            document.getElementById("str_split6").innerHTML = str_split[5];
+
+            //3번째 문제
+            console.log(num_split);
+            document.getElementById("num_split1").innerHTML = num_split[0];
+            document.getElementById("num_split2").innerHTML = num_split[1];
+            document.getElementById("num_split3").innerHTML = num_split[2];
+            document.getElementById("num_split4").innerHTML = num_split[3];
+            document.getElementById("num_split5").innerHTML = num_split[4];
+
 
 
         </script>
