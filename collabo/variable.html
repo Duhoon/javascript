@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <head>
         
@@ -5,4 +6,56 @@
     <body>
         
     </body>
+=======
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type = "text/javascript">
+        var name = "Ali";
+        var money;
+        money = 2000.50;
+        </script>
+        <script>
+        var myVar = "global";
+        function checkscope() {
+            var myVar = "local";
+            document.write(myVar)
+        }
+        typeof myVar
+        typeof (3+4)
+    </script>
+    </body>
+    
+<!doctype html>
+<!--html5-->
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var name= "Ali";
+            var money;
+            money = 2000.50;
+        </script>
+            <span id="demo"></span>
+            <button type="button" onclick=checkscoped() >global scoped</button>
+        <script>
+            var myVar= "global";
+            function checkscoped(){
+                var myVar = "local";
+                document.write(myBar);
+            }
+            document.getElementById("demo").innerHTML = checkscoped()
+        </script>
+
+    </body>
+
+>>>>>>> 2c19527cfb9f5847b6cabae0df494fe5529cd826
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="demo01"></p>
+        <script>
+        var person01 = {firstname:"John", lastName:"Doe",age:50,eyeColor:"blue"}
+        var x = person01.constructor(); x.age = 10;
+        var person02 = {
+            firstName : "John", lastName : "Doe",
+            fullName : function(firstVal,secondVal){
+                return this.firstName + " " + firstVal + " " + secondVal;
+            }
+        };
+        document.getElementById("demo01").innerHTML =
+        person01.firstName + "is" + person01.age + "years old.";
+        person02.nationality = "Korean";
+        delete person01.age;
+        </script>
+    </body>
+</html>
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <p id="demo01"></p>
+        <p id="demo02"></p>
+        <p id="demo03"></p>
+        <script>
+            var person01 = {firstName:"John", lastName:undefined, age:50, eyeColor:"Blue"};
+            console.log(person01);
+            var x = person01.constructor(); x.age=10; x.eyeColor = "green";
+            console.log(x);
+            var person02 = {
+                firstName:"John", lastName : "Doe", fullName : function(firstVal,secondVal){return this.firstName + " " + firstVal + " " + secondVal;
+                }
+            };
+            console.log(person02);
+            document.getElementById("demo01").innerHTML = person01.firstName + " is " + person01.age + " years old.";
+            document.getElementById("demo02").innerHTML = person02.firstName + " " +person02["lastName"];
+            document.getElementById("demo03").innerHTML = person02.fullName("Jane", "Valet");
+            person02.nationality = "Korean";
+
+        </script>
+    </body>
+</html>
