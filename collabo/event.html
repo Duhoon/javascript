@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--html5-->
+
+<html>
+
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+             var greeting;
+             var time = new Date().getHours(); // 현재 시간만 리턴
+             if (time < 10) { greeting = "Good morning";
+             } else if (time < 20) { greeting = "Good day";
+             } else { greeting = "Good evening";
+             }
+             document.getElementById("demo").innerHTML = greeting;
+            }
+            </script>
+            <button onclick="myFunction()">Try it</button>
+            <p id="demo"></p>
+    </body>
+
+</html>
