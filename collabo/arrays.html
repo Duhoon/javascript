@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        var fruits, text, fLen, i;
+        fruits = ["Banana", "Orange","Apple","Mango"];
+        fLen = fruits.length;
+        fruits.sort();
+        text = "<ul>";
+        for (i=0;i<fLen;i++){
+            text +="<li>"+fruits[i] + "<li>";}
+            text +="</ul>"
+            </script>
+            <p id="demo01"></p>
+            <script>
+            document.getElementById("demo01").innerHTML = text;
+            document.getElementById("demo02").innerHTML = fruits.pop()
+            var strPush = fruits.push("Kiwi")
+            document.getElementById("demo03").innerHTML = fruits;
+            var arraySplice = fruits.splice(0,2);
+            document.getElementById("demo04").innerHTML = fruits
+        </script>
+    </body>
+</html>
