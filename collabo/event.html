@@ -6,8 +6,23 @@
     <head>
 
     </head>
-    <body>
-        
+    <body >
+        <script>
+            function myFunction(){
+                var greeting;
+                var time = new Date().getHours();
+                if (time < 10){
+                    greeting = "Good morning";
+                } else if (time < 20){
+                    greeting = "Good day";
+                } else {
+                    greeting="Good evening";
+                }
+                document.getElementById("demo").innerHTML = greeting;
+            }
+        </script>
+        <button >Try it</button>
+        <p onload="myFunction()" id="demo"></p>
     </body>
 
 </html>

@@ -10,12 +10,12 @@
     <body>
         <script>
             var fruits, text, fLen, i;
-            fruit = ["Banana", "Orange", "Apple", "Mango"];
+            fruits = ["Banana", "Orange", "Apple", "Mango"];
             fLen = fruits.length;
             fruits.sort();
             text = "<ul>";
-            for(i=0, i < fLen; i++){
-                text += "li" + fruits[i]
+            for(i=0; i < fLen; i++){
+                text += "<li>" + fruits[i]; "</li>"
             }
 
             for(var fruit of fruits){
