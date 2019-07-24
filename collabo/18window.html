@@ -5,9 +5,17 @@
     <body>
         <script>
             window.document.getElementById("header")
-            window.open() - open a new window;
-            window.close() - open a new window;
-            window.moveTO() -move the current window
+            //window.open() - open a new window;
+            //window.close() - open a new window;
+            //window.moveTO() -move the current window
+            //window.resizeTo() -resize the curent window;
+        </script>
+        <p id="demo"></p>
+        <script>
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientwidth;
+        var h = window.innerHEight || document.documentElement.clientHeight;
+        var x = document.getElementById("demo");
+        x.innerHTML = "Browser inner window width: "+ w + ", height: " + h + ".";
         </script>
     </body>
 </html>
