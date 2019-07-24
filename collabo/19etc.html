@@ -5,6 +5,16 @@
         
     </head>
     <body>
-        
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <button onclick="goMoving()">Back to</button>
+        <script>
+            document.getElementById("demo").innerHTML = "Screen height is " + screen.height + ", Screen width is " + screen.width;
+            
+            function goMoving(){
+                window.history.back()
+            }
+            document.getElementById("demo1").innerHTML = navigator.appCodeName
+        </script>
     </body>
 </html>
