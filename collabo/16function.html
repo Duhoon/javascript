@@ -16,6 +16,20 @@
             var person = {
                 fullName: function (city, country){
                     return this.firstName + " " + this.lastName + "," + city + "," + country;
+        </script>
+    </body>
+</html>
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <span id="demo"></span>
+        <script>
+            var person = {
+                fullName: function (city,country){
+                    return this.firstName +" "+this.lastName + "," +city+","+country;
                 }
             }
             var person1 = {
@@ -30,4 +44,12 @@
         </script>   
     </body>
 
+            var x = person.fullName.call(person1, "Oslo", "Norway");
+            document.getElementById("demo").innerHTML = x;
+            var living = function (city,country){
+                return city + "," + country;
+            }
+            document.getElementById("demo01").innerHTML = living("Korea","Pangyo")
+        </script>
+    </body>
 </html>
