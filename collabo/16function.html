@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
+<!--html5-->
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <span id="demo"></span>
+        <span id="demo01"></span>
+        <script>
+            var hello;
+            hello = (val) => "Hello" + val;
+            var person = {
+                fullName: function (city, country){
+                    return this.firstName + " " + this.lastName + "," + city + "," + country;
+        </script>
+    </body>
+</html>
+
 <html>
     <head>
         
@@ -14,6 +35,15 @@
             var person1 = {
                 firstName: "John", lastName: "Doe"
             }
+            var x = person.fullName.call(person1,"Oslo", "Norway");
+            document.getElementById("demo").innerHTML = x;
+            var living = function (city, country){
+                return city + "," + country;
+            }
+            document.getElementById("demo01").innerHTML = living('Korea', 'Pangyo')
+        </script>   
+    </body>
+
             var x = person.fullName.call(person1, "Oslo", "Norway");
             document.getElementById("demo").innerHTML = x;
             var living = function (city,country){
