@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<!--html-->
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <script>
+            // 해보기 첫번째 자바스크립트
+            var thingcheck;
+            function check(param){
+                var num = param.value;
+                document.getElementById("md").innerHTML = "<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option>"
+            }
+
+        </script>
+
+        <div class="container">
+            <!--해보기 첫번째-->
+            <div class="row">
+                <form class="col">
+                    <h1>대분류</h1>
+                    <select class="form-control" name="lg" onchange="check(this)" multiple>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </form>
+                <form class="col">
+                    <h1>중분류</h1>
+                    <select class="form-control" id="md" multiple></select>
+                </form>
+            </div>
+        </div>
+        <!--해보기 두번째-->
+        <!--해보기 두번째 스크립트-->
+        <script>
+            function valid(param) {
+                var firstname = document.getElementById("firstname").value.length();
+                var lastname = document.getElementById("lastname").value.length();
+                var username = document.getElementById("username").value.length();
+                var city = document.getElementById("city").value.length();
+                var state = document.getElementById("state").value.length();
+                var zip = document.getElementById("zip").value.length();
+
+                if (firstname == 0)
+            }
+        </script>
+        <div class="container">
+            <div class="row mt-5">
+                <form id="myform">
+                    <div class="row my-5">
+                        <div class="form-group mx-3" >
+                            <label>First name</label>
+                            <div class="form-row">
+                                <input class="form-control" id="firstname">
+                            </div>
+                        </div>
+                        <div class="form-group mx-3">
+                            <label>Last Name</label>
+                            <input class="form-control" id="lastname">
+                        </div>
+                        <div class="form-group mx-3 mt-4">
+                            <input class="form-control" placeholder="Username" id="username">
+                        </div>
+                    </div>
+                    <div class="form-inline my-5">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="City" id="city">
+                        </div>
+                        <div class="form-group mx-3">
+                            <input class="form-control"  placeholder="State" id="state">
+                        </div>
+                        <div class="form-group mx-3">
+                            <input class="form-control" placeholder="Zip" id="zip">
+                        </div>
+                    </div>
+                    <div class="form-inline my-5">
+                        <div class="form-group mx-3">
+                            <input type="checkbox" class="form-control"> Agree to terms and conditions
+                        </div>
+                    </div>
+                    <buttons type="submit" class="btn btn-primary">SUBMIT FORM</buttons>
+                </form>
+            </div>
+        </div>
+    </body>
+
+
+
+</html>
