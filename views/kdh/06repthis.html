@@ -43,16 +43,6 @@
                 return false;
             }
 
-            var compare = function(param){
-
-                var num2 = document.getElementById("compare2").value;
-                if (num1 > num2){
-                document.getElementById("compare3").value = num1;
-            }   else{
-                document.getElementById("compare3").value = num2;
-            }
-            return false
-            }
         </script>
         <div class="container">
             <!--크기비교 Function 만들기-->
@@ -73,18 +63,6 @@
                 </div>
             </form>
             <!--동일단어 제외문장 출력-->
-            <script>
-                var str = "HTML element has been changed";
-
-                var exception = function (param) {
-                    var str1 = document.getElementById("except1").value;
-                    var locate = str.indexOf(str1);
-                    var substr = str.substring(0, locate);
-                    document.getElementById("except3").value = substr;
-                   
-                    return false;
-                }
-            </script>
             <form name="exception" class="my-5" action="" onsubmit="return integrate(this)">
                 <div class="row">
                     <div class="form-group col-6">
@@ -99,20 +77,6 @@
                 </div>
             </form>
             <!--문자 위치 바꾸는 Function 만들기-->
-            <script>
-                var str10 = "HTML element CSS";
-
-                var strlocate = function() {
-                    var str2 = document.getElementById("strlocate1").value;
-                    var str3 = document.getElementById("strlocate2").value;
-                    var temp = "temptemp";
-                    var strrep = str10.replace(str2, temp);
-                    strrep = strrep.replace(str3, str2);
-                    strrep = strrep.replace(temp, str3);
-                    document.getElementById("strlocate3").value = strrep;
-                    return false;
-                }
-            </script>
             <form name="rep" class="my-5" action="" onsubmit="return integrate(this)">
                 <div class="row">
                     <div class="form-group col-4">
