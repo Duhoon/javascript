@@ -45,43 +45,97 @@
         <!--해보기 두번째 스크립트-->
         <script>
             function valid(param) {
-                var firstname = document.getElementById("firstname").value.length();
-                var lastname = document.getElementById("lastname").value.length();
-                var username = document.getElementById("username").value.length();
-                var city = document.getElementById("city").value.length();
-                var state = document.getElementById("state").value.length();
-                var zip = document.getElementById("zip").value.length();
+                var firstname = document.myform.firstname.value.length;
+                console.log(firstname);
+                var lastname = document.myform.lastname.value.length;
+                var username = document.myform.username.value.length;
+                var city = document.myform.city.value.length;
+                var state = document.myform.state.value.length;
+                var zip = document.myform.zip.value.length;
+                //var good = fucntion(param);
+                
+                console.log(firstname);
+                    
+                    if (firstname ==0 || firstname==""){
+                        document.getElementById("warn1").innerHTML = "<p class='text-danger'>Please enter First name</p>" ;
+                    } else{
+                        document.getElementById("warn1").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                    if(lastname == 0){
+                        document.getElementById("warn2").innerHTML = "<p class='text-danger'>Please write lastname.</p>";
+                    } else{
+                        document.getElementById("warn2").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                    if(username == 0){
+                        document.getElementById("warn3").innerHTML = "<p class='text-danger'>Please choose username.</p>";
+                    } else{
+                        document.getElementById("warn3").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                    if(city == 0){
+                        document.getElementById("warn4").innerHTML = "<p class='text-danger'>Please provide a valid city.</p>";
+                    } else{
+                        document.getElementById("warn4").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                    if(state == 0){
+                        document.getElementById("warn5").innerHTML = "<p class='text-danger'>Please provide a state.</p>";
+                    } else{
+                        document.getElementById("warn5").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                    if(zip == 0) {
+                        document.getElementById("warn6").innerHTML = "<p class='text-danger'>Please provide a zip.</p>";
+                    } else{
+                        document.getElementById("warn6").innerHTML = "<p class='text-success'>Looks good</p>";
+                    }
+                return false;
 
-                if (firstname == 0)
             }
         </script>
         <div class="container">
             <div class="row mt-5">
-                <form id="myform">
+                <form name="myform" id="myform" action="#" onsubmit="return valid(this)">
                     <div class="row my-5">
                         <div class="form-group mx-3" >
                             <label>First name</label>
-                            <div class="form-row">
-                                <input class="form-control" id="firstname">
+                            <div class="form-row" id="firstname_">
+                                <input type="text" class="form-control" id="firstname" name="firstname">
+                            </div>
+                            <div class="form-row" id="warn1">
+
                             </div>
                         </div>
-                        <div class="form-group mx-3">
+                        <div class="form-group mx-3" id="lastname_">
                             <label>Last Name</label>
-                            <input class="form-control" id="lastname">
+                            <input type="text" class="form-control" id="lastname" name="lastname">
+                            <div class="form-row" id="warn2">
+                                
+                            </div>
                         </div>
-                        <div class="form-group mx-3 mt-4">
-                            <input class="form-control" placeholder="Username" id="username">
+                        <div class="form-group mx-3 mt-4" id="username_">
+                            <input type="text" class="form-control" placeholder="Username" id="username" name="username">
+                            <div class="form-row" id="warn3">
+                                
+                            </div>
                         </div>
                     </div>
-                    <div class="form-inline my-5">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="City" id="city">
+
+                    <div class="row my-5">
+                        <div class="form-group mx-3" id="city_">
+                            <input type="text" class="form-control" placeholder="City" id="city" name="city">
+                            <div class="form-row" id="warn4">
+                                
+                            </div>
                         </div>
-                        <div class="form-group mx-3">
-                            <input class="form-control"  placeholder="State" id="state">
+                        <div class="form-group mx-3" id="state_">
+                            <input type="text" class="form-control"  placeholder="State" id="state" name="state">
+                            <div class="form-row" id="warn5">
+                                
+                            </div>
                         </div>
-                        <div class="form-group mx-3">
-                            <input class="form-control" placeholder="Zip" id="zip">
+                        <div class="form-group mx-3" id="zip_">
+                            <input type="text" class="form-control" placeholder="Zip" id="zip" name="zip">
+                            <div class="form-row" id="warn6">
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="form-inline my-5">
@@ -89,7 +143,7 @@
                             <input type="checkbox" class="form-control"> Agree to terms and conditions
                         </div>
                     </div>
-                    <buttons type="submit" class="btn btn-primary">SUBMIT FORM</buttons>
+                    <button type="submit" class="btn btn-primary">SUBMIT FORM</button>
                 </form>
             </div>
         </div>
