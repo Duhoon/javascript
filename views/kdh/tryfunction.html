@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--html5-->
+
+<html>
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <script>
+            var compare = function(param){
+                var num1 = document.getElementById("compare1").value;
+                var num2 = document.getElementById("compare2").value;
+                if (num1 > num2){
+                document.getElementById("compare3").value = num1;
+            }   else{
+                document.getElementById("compare3").value = num2;
+            }
+            return false
+            }
+        </script>
+        <div class="container">
+            <!--크기비교 Function 만들기-->
+            <form class="my-5" action="../kdh/tryfunction.html" onsubmit="return compare()">
+                <div class="row">
+                <div class="form-group col-4">
+                    <input class="form-control" name="compare1" id="compare1">
+                </div>
+                <div class="form-group col-4">
+                    <input class="form-control" name="compare2" id="compare2">
+                    </div>
+                <div class="form-group col-4">
+                    <input class="form-control" name="compare3" id="compare3">
+                </div>
+                </div>
+                <div class="form-row">
+                    <button class = "btn btn-primary" type="submit">PRESS</button>
+                </div>
+            </form>
+            <!--동일단어 제외문장 출력-->
+            <script>
+                var str = "HTML element has been changed";
+
+                var exception = function (param) {
+                    var str1 = document.getElementById("except1").value;
+                    var locate = str.indexOf(str1);
+                    var substr = str.substring(0, locate);
+                    document.getElementById("except3").value = substr;
+                   
+                    return false
+                }
+            </script>
+            <form name="youform" class="my-5" action="" onsubmit="return exception()">
+                <div class="row">
+                    <div class="form-group col-6">
+                        <input class="form-control" name="except1" id="except1">
+                    </div>
+                    <div class="form-group col-6">
+                        <input class="form-control" name="except3" id="except3" Placeholder="HTML element has been changed">
+                    </div>
+                </div>
+                <div class="form-row text-center">
+                        <button class="btn btn-primary" type="submit" >PRESS</button>
+                </div>
+            </form>
+            <!--문자 위치 바꾸는 Function 만들기-->
+            <script>
+                var str10 = "HTML element CSS";
+
+                var strlocate = function() {
+                    var str2 = document.getElementById("strlocate1").value;
+                    var str3 = document.getElementById("strlocate2").value;
+                    var temp = "temptemp";
+                    var strrep = str10.replace(str2, temp);
+                    strrep = strrep.replace(str3, str2);
+                    strrep = strrep.replace(temp, str3);
+                    document.getElementById("strlocate3").value = strrep;
+                    return false;
+                }
+            </script>
+            <form name="youform" class="my-5" action="" onsubmit="return strlocate()">
+                <div class="row">
+                    <div class="form-group col-4">
+                        <input class="form-control" name="strlocate1" id="strlocate1">
+                    </div>
+                    <div class="form-group col-4">
+                        <input class="form-control" name="strlocate2" id="strlocate2">
+                    </div>
+                    <div class="form-group col-4">
+                        <input class="form-control" name="strlocate3" id="strlocate3" Placeholder="HTML element CSS">
+                    </div>
+                </div>
+                <div class="form-row text-center">
+                    <button class="btn btn-primary" type="submit" >PRESS</button>
+                </div>
+            </form>
+        </div>
+    </body>
+
+</html>
